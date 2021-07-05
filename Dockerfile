@@ -33,8 +33,12 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir src/
 
 RUN cd src && \
-    git clone https://github.com/Slamtec/rplidar_ros.git \
-    git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git \
+    git clone https://github.com/Slamtec/rplidar_ros.git
+
+RUN cd src && \
+    git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git
+
+RUN cd src && \
     git clone https://github.com/f1tenth/vesc.git
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
