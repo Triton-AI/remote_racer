@@ -46,6 +46,7 @@ RUN echo 'source /root/ros_ws/noetic/setup.bash' >> ~/.bashrc
 
 RUN cd src && \
     git clone https://github.com/ros/catkin && \
+    cd catkin && \
     mkdir build && \
     cd build && \
     cmake ../ && \
