@@ -22,8 +22,7 @@ RUN apt-get update --fix-missing \
     nano \
     rsync \
     zip \
-    ros-noetic-usb-cam \
-    ros-noetic-catkin
+    ros-noetic-usb-cam
 
 RUN python3 -m pip install --upgrade pip
 
@@ -44,6 +43,14 @@ RUN cd src && \
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/noetic/setup.bash' >> ~/.bashrc
+
+RUN cd src && \
+    git clone https://github.com/ros/catkin && \
+    mkdir build && \
+    cd build && \
+    cmake ../ && \
+    make && \
+    make install
 
 RUN cd src && \
     git clone https://github.com/wjwwood/serial.git && \
