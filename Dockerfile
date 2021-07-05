@@ -44,6 +44,12 @@ RUN cd src && \
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/noetic/setup.bash' >> ~/.bashrc
 
+RUN cd src && \
+    git clone https://github.com/wjwwood/serial.git && \
+    cd serial && \
+    make && \
+    make install
+
 RUN rosdep install --from-paths src --ignore-src -r -y
 RUN cd /root/ros_ws && \
     source /opt/ros/noetic/setup.bash && \
