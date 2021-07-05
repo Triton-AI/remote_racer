@@ -23,7 +23,7 @@ RUN apt-get update --fix-missing \
     rsync \
     zip \
     ros-noetic-usb-cam \
-    python3-catkin-pkg
+    python-catkin-pkg
 
 RUN python3 -m pip install --upgrade pip
 
