@@ -22,7 +22,8 @@ RUN apt-get update --fix-missing \
     nano \
     rsync \
     zip \
-    ros-noetic-usb-cam
+    ros-noetic-usb-cam \
+    ros-noetic-catkin
 
 RUN python3 -m pip install --upgrade pip
 
