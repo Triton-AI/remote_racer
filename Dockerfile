@@ -29,8 +29,6 @@ RUN python3 -m pip install --upgrade pip
 
 RUN python3 -m pip install pyvesc
 
-RUN python3 -m pip install catkin-pkg
-
 WORKDIR /root/ros_ws/
 SHELL ["/bin/bash", "-c"]
 RUN mkdir src/
@@ -42,7 +40,8 @@ RUN cd src && \
     git clone https://github.com/ENSTABretagneRobotics/razor_imu_9dof.git
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
-RUN echo 'source /root/ros_ws/noetic/setup.bash' >> ~/.bashrc
+RUN echo 'source /root/ros_ws/devel/setup.bash' >> ~/.bashrc
+RUN source /opt/ros/noetic/setup.bash
 
 RUN cd src && \
     git clone https://github.com/ros/catkin && \
