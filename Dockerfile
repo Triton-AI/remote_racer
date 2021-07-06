@@ -23,24 +23,23 @@ RUN apt-get update --fix-missing \
     rsync \
     zip \
     ros-noetic-usb-cam \
-    python-catkin-pkg
+    python3-catkin-pkg
 
 RUN python3 -m pip install --upgrade pip
 
 RUN python3 -m pip install pyvesc
+
+RUN python3 -m pip install catkin-pkg
 
 WORKDIR /root/ros_ws/
 SHELL ["/bin/bash", "-c"]
 RUN mkdir src/
 
 RUN cd src && \
-    git clone https://github.com/Slamtec/rplidar_ros.git
-
-RUN cd src && \
-    git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git
-
-RUN cd src && \
-    git clone https://github.com/f1tenth/vesc.git
+    git clone https://github.com/Slamtec/rplidar_ros.git && \
+    git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.github && \
+    git clone https://github.com/f1tenth/vesc.git && \
+    git clone https://github.com/ENSTABretagneRobotics/razor_imu_9dof.git
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/noetic/setup.bash' >> ~/.bashrc
