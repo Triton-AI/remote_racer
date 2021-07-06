@@ -41,13 +41,14 @@ RUN cd src && \
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/devel/setup.bash' >> ~/.bashrc
-RUN source /opt/ros/noetic/setup.bash
+
 
 RUN cd src && \
     git clone https://github.com/ros/catkin && \
     cd catkin && \
     mkdir build && \
     cd build && \
+    source /opt/ros/noetic/setup.bash && \
     cmake ../ && \
     make && \
     make install
@@ -55,6 +56,7 @@ RUN cd src && \
 RUN cd src && \
     git clone https://github.com/wjwwood/serial.git && \
     cd serial && \
+    source /opt/ros/noetic/setup.bash && \
     make && \
     make install
 
