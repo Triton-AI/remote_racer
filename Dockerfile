@@ -26,7 +26,7 @@ RUN apt-get update --fix-missing \
 
 RUN python3 -m pip install --upgrade pip
 
-RUN python3 -m pip install pyvesc
+RUN python3 -m pip install git+https://github.com/LiamBindle/PyVESC
 
 WORKDIR /root/ros_ws/
 SHELL ["/bin/bash", "-c"]
@@ -35,7 +35,7 @@ RUN mkdir src/
 RUN cd src && \
     git clone https://github.com/Slamtec/rplidar_ros.git && \
     git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git && \
-    git clone https://github.com/f1tenth/vesc.git && \x
+    git clone https://github.com/f1tenth/vesc.git && \
     git clone -b develop https://github.com/ros-drivers/usb_cam
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
