@@ -27,7 +27,10 @@ RUN apt-get update --fix-missing \
 
 RUN python3 -m pip install --upgrade pip
 
-RUN python3 -m pip install pyvesc
+#RUN python3 -m pip install pyvesc
+#RUN python3 -m pip install pythonrc
+
+RUN python3 -m pip install git+https://github.com/LiamBindle/PyVESC
 
 WORKDIR /root/ros_ws/
 SHELL ["/bin/bash", "-c"]
