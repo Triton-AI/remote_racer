@@ -37,7 +37,7 @@ RUN cd src && \
     git clone https://github.com/Slamtec/rplidar_ros.git && \
     git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git && \
     git clone https://github.com/f1tenth/vesc.git && \
-    git clone https://github.com/ENSTABretagneRobotics/razor_imu_9dof.git
+    git clone -b develop https://github.com/ros-drivers/usb_cam
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/devel/setup.bash' >> ~/.bashrc
