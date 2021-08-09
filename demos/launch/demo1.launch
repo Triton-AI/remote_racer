@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+  <include file="$(find vesc_driver)/launch/vesc_driver_node.launch"/>
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch"/>
+</launch>
+
