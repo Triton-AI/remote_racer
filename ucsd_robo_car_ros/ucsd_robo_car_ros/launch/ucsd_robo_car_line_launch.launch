@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find ucsd_robo_car_ros)/launch/lidar_and_camera_launch.launch"/>
+  <include file="$(find ucsd_robo_car_ros)/launch/throttle_and_steering_launch.launch"/>
+  <include file="$(find ucsd_robo_car_ros)/launch/lineDetection_launch.launch"/>
+</launch>

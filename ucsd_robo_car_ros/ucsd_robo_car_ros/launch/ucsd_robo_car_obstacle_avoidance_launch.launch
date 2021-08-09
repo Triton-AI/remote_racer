@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find ucsd_robo_car_ros)/launch/ucsd_robo_car_lane_launch.launch"/>
+  <include file="$(find ucsd_robo_car_ros)/launch/spawn_my_robot.launch"/>
+  <!-- <include file="$(find racecar)/launch/teleop.launch"/> -->
+  <node name="obstacle_detection_node" pkg="ucsd_robo_car_ros" type="obstacle_Detection.py" />
+  <!-- Show in rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ucsd_robo_car_ros)/config/rviz_config.rviz" required="true" />
+</launch>

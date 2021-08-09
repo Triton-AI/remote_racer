@@ -1,0 +1,4 @@
+<launch>
+  <node name="line_detection_node" pkg="ucsd_robo_car_ros" type="line_Detection.py" output="screen" />
+  <node name="lane_guidance_node" pkg="ucsd_robo_car_ros" type="lane_guidance.py" />
+</launch>
