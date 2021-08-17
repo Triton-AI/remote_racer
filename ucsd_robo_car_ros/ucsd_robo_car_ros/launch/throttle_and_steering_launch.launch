@@ -1,4 +1,0 @@
-<launch>
-  <node name="vesc_steering_node" pkg="ucsd_robo_car_ros" type="vesc_steering.py" />
-  <node name="vesc_rpm_node" pkg="ucsd_robo_car_ros" type="vesc_rpm.py" />
-</launch>

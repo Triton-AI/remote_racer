@@ -1,4 +1,0 @@
-<launch>
-  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
-  <include file="$(find sick_scan)/launch/sick_tim_5xx.launch"/>
-</launch>

@@ -1,0 +1,19 @@
+[submodule "usb_cam"]
+	path = usb_cam
+	url = https://github.com/Triton-AI/usb_cam.git
+[submodule "serial"]
+	path = serial
+	url = https://github.com/Triton-AI/serial.git
+[submodule "catkin"]
+	path = catkin
+	url = https://github.com/Triton-AI/catkin.git
+[submodule "vesc"]
+	path = vesc
+	url = https://github.com/Triton-AI/vesc.git
+[submodule "rplidar_ros"]
+	path = rplidar_ros
+	url = https://github.com/Triton-AI/rplidar_ros.git
+[submodule "usb_cam-release"]
+	path = usb_cam-release
+	url = https://github.com/Triton-AI/usb_cam-release.git
+	branch = debian/noetic/usb_cam

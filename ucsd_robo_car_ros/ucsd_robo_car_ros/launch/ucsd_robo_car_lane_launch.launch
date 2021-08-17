@@ -1,6 +1,0 @@
-<launch>
-  <rosparam command="load" file="$(find ucsd_robo_car_ros)/config/color_filter_parameters/blue_filter.yaml" />
-  <include file="$(find ucsd_robo_car_ros)/launch/lidar_and_camera_launch.launch"/>
-  <include file="$(find ucsd_robo_car_ros)/launch/throttle_and_steering_launch.launch"/>
-  <include file="$(find ucsd_robo_car_ros)/launch/laneDetection_launch.launch"/>
-</launch>
