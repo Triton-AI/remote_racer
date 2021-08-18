@@ -33,17 +33,16 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir src/
 
 RUN cd src && \
-    git clone https://github.com/Slamtec/rplidar_ros.git && \
-    git clone https://gitlab.com/djnighti/ucsd_robo_car_ros.git && \
-    git clone https://github.com/f1tenth/vesc.git && \
-    git clone -b develop https://github.com/ros-drivers/usb_cam
+    git clone https://github.com/Triton-AI/rplidar_ros.git && \
+    git clone https://github.com/Triton-AI/vesc.git && \
+    git clone -b develop https://github.com/Triton-AI/usb_cam.git
 
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 RUN echo 'source /root/ros_ws/devel/setup.bash' >> ~/.bashrc
 
 
 RUN cd src && \
-    git clone https://github.com/ros/catkin && \
+    git clone https://github.com/Triton-AI/catkin.git && \
     cd catkin && \
     mkdir build && \
     cd build && \
@@ -53,7 +52,7 @@ RUN cd src && \
     make install
 
 RUN cd src && \
-    git clone https://github.com/wjwwood/serial.git && \
+    git clone https://github.com/Triton-AI/serial.git && \
     cd serial && \
     source /opt/ros/noetic/setup.bash && \
     make && \
