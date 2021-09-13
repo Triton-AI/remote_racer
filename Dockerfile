@@ -22,7 +22,9 @@ RUN apt-get update --fix-missing \
     nano \
     rsync \
     zip \
-    python3-catkin-pkg
+    python3-catkin-pkg \
+    ros-noetic-rviz \
+    usbutils
 
 RUN python3 -m pip install --upgrade pip
 
