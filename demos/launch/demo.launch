@@ -1,4 +1,0 @@
-<launch>
-  <node name="vesc_steering_node" pkg="demos" type="wheel_control.py" />
-  <node name="vesc_throttle_node" pkg="demos" type="throttle_control.py" />
-</launch>
