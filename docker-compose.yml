@@ -1,0 +1,19 @@
+services:
+  ros-master:
+    image: remote_racer_img
+    container_name: remote_service
+    command: roscore
+    networks:
+      - ros_docker
+
+  drivers:
+    image: remote_racer_img
+    container_name: launch_drivers
+    depends_on:
+      - ros-master
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=talker"
+    command: roslaunch demos demo1.launch
+    networks:
+      - ros_docker
